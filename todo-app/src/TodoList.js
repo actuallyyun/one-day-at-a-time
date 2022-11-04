@@ -5,20 +5,32 @@ const todos = []
 
 
 const TodoList = () => {
-    return (
 
-        <div className="row">
+    return (
+        < div className="row" >
             <div className="col-3">
-                <h5>Today</h5>
+                <ListHeader />
                 <TodoInput />
-                <TodoItems />
+                <ListContent />
             </div>
             <div className="col-3">Tomorrow</div>
             <div className="col-3">This Week</div>
             <div className="col-3">Intention</div>
-        </div>
+        </div >
 
     )
+}
+
+
+const ListContent = () => {
+    if (todos) {
+        return (<TodoItems todos={todos} />)
+    } else {
+        return (<EmptyTodo />)
+    }
+}
+const ListHeader = () => {
+    return <h5>Today</h5>
 }
 
 const TodoInput = () => {
@@ -39,6 +51,15 @@ const TodoInput = () => {
         </div>
     )
 }
+
+const EmptyTodo = () => {
+    return (
+        <div>
+            <span> You do not have any todos pageYOffset.</span >
+        </div >
+    )
+}
+
 
 
 

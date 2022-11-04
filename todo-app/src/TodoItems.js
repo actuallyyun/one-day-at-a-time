@@ -1,21 +1,9 @@
 import React from "react"
 
-const TodoItems = () => {
+const TodoItems = (props) => {
     return (
         <ul className="list-group">
-            <li className="list-group-item d-flex justify-content-between align-items-center">
-                Cras justo odio
-                <DoneToggle />
-                <DeleteToggle />
-            </li>
-            <li className="list-group-item d-flex justify-content-between align-items-center">
-                Dapibus ac facilisis in
-                <span className="badge badge-primary badge-pill">2</span>
-            </li>
-            <li className="list-group-item d-flex justify-content-between align-items-center">
-                Morbi leo risus
-                <span className="badge badge-primary badge-pill">1</span>
-            </li>
+            <ShowTodos todos={props.todos} />
         </ul>
     )
 }
@@ -38,5 +26,18 @@ const DeleteToggle = () => {
     )
 }
 
+const ShowTodos = (props) => {
+    return (
+
+        props.todos.map(todo => {
+            return <li className="list-group-item d-flex justify-content-between align-items-center">
+                {todo}
+                <DoneToggle />
+                <DeleteToggle />
+            </li>
+        })
+
+    )
+}
 
 export default TodoItems
