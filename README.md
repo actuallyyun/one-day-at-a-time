@@ -8,6 +8,8 @@
 + [Contributing](../CONTRIBUTING.md)
 
 ## About <a name = "about"></a>
+
+#### A Mindful To-do 
 This is a To-do app with intuitive user interface that helps you to organize your life and eliminate anxiety. Grounded in the **One Day at a Time** practice,it reminds you to not asking too much of yourself, not overthinking about the future and focus on what you can do today. Be present, and live one good day after another. It's that simple.
 
 ## Features
