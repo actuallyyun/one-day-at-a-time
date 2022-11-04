@@ -1,7 +1,7 @@
 import React from 'react';
 import TodoItems from './TodoItems';
 
-
+const todos = []
 
 
 const TodoList = () => {
@@ -22,9 +22,20 @@ const TodoList = () => {
 }
 
 const TodoInput = () => {
+    const addNewTodo = (e) => {
+        console.log(e)
+        if (e.key === "Enter") {
+            console.log("Enter is pressed")
+            const newTodo = e.target.value
+            console.log(e.target.value)
+            todos.push(newTodo)
+            console.log(todos)
+        }
+    }
+
     return (
-        <div class="mb-3">
-            <input type="text" class="form-control" id="todayList" placeholder="today" />
+        <div className="mb-3">
+            <input type="text" className="form-control" id="todayList" placeholder="today" onKeyPress={(e) => addNewTodo(e)} />
         </div>
     )
 }
