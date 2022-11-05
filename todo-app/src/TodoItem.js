@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 const TodoItem = (props) => {
     const todos = props.todos
@@ -28,15 +28,8 @@ const DoneToggle = (props) => {
     const completeTodo = (e) => {
 
         const todo = props.todo
-
-        console.log('todo', todo)
-        console.log("todo before", props.todos)
-
-        const newTodos = todos.filter(todo => todo !== todo)
-
+        const newTodos = todos.filter(item => item !== todo)
         props.setTodos(newTodos)
-
-        console.log("todo after", todos)
     }
 
     return (
