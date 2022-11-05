@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const ListInput = (props) => {
     const todos = props.todos
@@ -7,7 +7,8 @@ const ListInput = (props) => {
     const addNewTodo = (e) => {
         //When user presses "Enter" key, a new todo is created 
         if (e.key === "Enter") {
-            const newTodo = e.target.value
+            const newTodo = e.target.value.trim()
+
             //User cannot create todo with empty string nor dulipcated todo
             if (newTodo.length !== 0 && !isDuplicatedTodo(newTodo)) {
                 setTodos(todos.concat(newTodo))

@@ -3,11 +3,8 @@ import ListInput from './ListInput';
 import ListBody from './ListBody';
 
 const TodoList = () => {
-    //everytime it refreshes, todos is set to []
 
     const [todos, setTodos] = useState([])
-
-    console.log('todo in TodoList', todos)
     return (
         < div className="row" >
             <div className="col-3">

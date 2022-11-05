@@ -4,7 +4,6 @@ import TodoItem from "./TodoItem"
 const ListBody = (props) => {
 
     const todos = props.todos
-    console.log('todos in listbody', todos)
 
     if (todos.length > 0) {
         return (<DisplayTodos
