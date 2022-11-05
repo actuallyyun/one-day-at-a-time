@@ -5,6 +5,8 @@ import ListBody from './ListBody';
 const TodoList = () => {
 
     const [todos, setTodos] = useState([])
+    const [finishedTodos, setFinishedTodos] = useState([])
+
     return (
         < div className="row" >
             <div className="col-3">
@@ -16,6 +18,8 @@ const TodoList = () => {
                 < ListBody
                     todos={todos}
                     setTodos={setTodos}
+                    finishedTodos={finishedTodos}
+                    setFinishedTodos={setFinishedTodos}
                 />
             </div>
             <div className="col-3">Tomorrow</div>

@@ -14,6 +14,8 @@ const TodoItem = (props) => {
                     todos={todos}
                     setTodos={props.setTodos}
                     todo={todo}
+                    finishedTodos={props.finishedTodos}
+                    setFinishedTodos={props.setFinishedTodos}
                 />
                 <DeleteToggle
                     todos={todos}
@@ -34,6 +36,8 @@ const DoneToggle = (props) => {
 
         const todo = props.todo
         const newTodos = todos.filter(item => item !== todo)
+        props.setFinishedTodos(props.finishedTodos.concat(todo))
+
         props.setTodos(newTodos)
     }
 

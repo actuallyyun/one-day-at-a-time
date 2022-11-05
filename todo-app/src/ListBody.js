@@ -9,6 +9,8 @@ const ListBody = (props) => {
         return (<DisplayTodos
             todos={todos}
             setTodos={props.setTodos}
+            finishedTodos={props.finishedTodos}
+            setFinishedTodos={props.setFinishedTodos}
         />)
     } else {
         return (<EmptyTodo />)
@@ -24,6 +26,8 @@ const DisplayTodos = (props) => {
             <TodoItem
                 todos={props.todos}
                 setTodos={props.setTodos}
+                finishedTodos={props.finishedTodos}
+                setFinishedTodos={props.setFinishedTodos}
             />
         </ul>
     )
