@@ -10,19 +10,14 @@ const TodoItems = (props) => {
 
 const DoneToggle = () => {
     return (
-        <div className="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="customRadioInline1" name="customRadioInline1" className="custom-control-input" />
-            <label className="custom-control-label" >Done</label>
-        </div>
+        <button type="button" className="btn btn-success btn-sm">Done</button>
+
     )
 }
 
 const DeleteToggle = () => {
     return (
-        <div className="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="customRadioInline2" name="customRadioInline1" className="custom-control-input" />
-            <label className="custom-control-label">Delete</label>
-        </div>
+        <button type="button" className="btn btn-danger btn-sm">Delete</button>
     )
 }
 
