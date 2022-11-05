@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ListInput from './ListInput';
-import ListBody from './ListBody';
+import ListInput from './todayTodos.js/ListInput';
+import ListBody from './todayTodos.js/ListBody';
 import FinishedListBody from './finishedTodos/FinishedListBody';
 
 const TodoList = () => {
