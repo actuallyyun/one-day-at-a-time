@@ -29,8 +29,8 @@ const DeleteToggle = () => {
 const ShowTodos = (props) => {
     return (
 
-        props.todos.map(todo => {
-            return <li className="list-group-item d-flex justify-content-between align-items-center">
+        props.todos.map((todo, index) => {
+            return <li className="list-group-item d-flex justify-content-between align-items-center" key={index}>
                 {todo}
                 <DoneToggle />
                 <DeleteToggle />
