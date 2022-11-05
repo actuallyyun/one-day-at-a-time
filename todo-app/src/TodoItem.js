@@ -13,8 +13,13 @@ const TodoItem = (props) => {
                 <DoneToggle
                     todos={todos}
                     setTodos={props.setTodos}
-                    todo={todo} />
-                <DeleteToggle />
+                    todo={todo}
+                />
+                <DeleteToggle
+                    todos={todos}
+                    setTodos={props.setTodos}
+                    todo={todo}
+                />
             </li>
         })
 
@@ -22,7 +27,7 @@ const TodoItem = (props) => {
 }
 
 const DoneToggle = (props) => {
-
+    //todo after removing it, the item should be saved into Done list
     const todos = props.todos
 
     const completeTodo = (e) => {
@@ -40,9 +45,22 @@ const DoneToggle = (props) => {
     )
 }
 
-const DeleteToggle = () => {
+const DeleteToggle = (props) => {
+    const todos = props.todos
+    const setTodos = props.setTodos
+
+    const handleClick = (todo) => {
+        console.log(todo)
+        const newTodos = todos.filter(item => item !== todo)
+        setTodos(newTodos)
+    }
+
     return (
-        <button type="button" className="btn btn-danger btn-sm">Delete</button>
+        <button
+            type="button"
+            className="btn btn-danger btn-sm"
+            onClick={() => handleClick(props.todo)}
+        >Delete</button>
     )
 }
 
