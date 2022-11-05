@@ -10,8 +10,6 @@ const FinishedListBody = (props) => {
     }
 }
 
-
-
 const ShowFinishedList = (props) => {
     return (
         props.todos.map((todo, index) => {

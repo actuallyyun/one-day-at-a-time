@@ -14,17 +14,25 @@ For to-do list component,it should do the following:
     - [x] Once a new item is created, the list needs to be updated
 - [x] User can create a new todo by pressing on the "Enter" key
     - [x] User cannot create a new todo with empty string
-    - [ ] User cannot create duplicated todo items
+    - [x] User cannot create duplicated todo items
 
-- [ ] User can delete todo items using the `Delete` button
-    - [ ] List needs to be refreshed 
-- [ ] User can complete todo items using the `Done` button
-    - [ ] List needs to be refreshed
+- [x] User can delete todo items using the `Delete` button
+    - [x] List needs to be refreshed 
+- [x] User can complete todo items using the `Done` button
+    - [x] List needs to be refreshed
+    - [x] Item is shown in the `Done` section
+    - [?] Maybe it should be shown in reversed order
 
 
 # Feature 3:
 Interactions between different kind of todos
-- The user can drag todo items from one list to another
+- [ ] The user can drag todo items from one list to another
 
 # Nice-to-haves:
-- Use can link todo with her calendar
+- [ ] Use can link todo with her calendar
+- [ ] Improve UI
+
+# Next
+- [ ] Add tests to existing code
+- [ ] Implement TTD for future code
+- [ ] Implement drag and drop function
