@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ListInput from './ListInput';
 import ListBody from './ListBody';
+import FinishedListBody from './finishedTodos/FinishedListBody';
 
 const TodoList = () => {
 
@@ -10,7 +11,7 @@ const TodoList = () => {
     return (
         < div className="row" >
             <div className="col-3">
-                <ListHeader />
+                <ListHeader title={"Today"} />
                 <ListInput
                     todos={todos}
                     setTodos={setTodos}
@@ -22,17 +23,28 @@ const TodoList = () => {
                     setFinishedTodos={setFinishedTodos}
                 />
             </div>
-            <div className="col-3">Tomorrow</div>
-            <div className="col-3">This Week</div>
-            <div className="col-3">Intention</div>
+            <div className="col-3">
+                <ListHeader title={"Done"} />
+                <FinishedListBody finishedTodos={finishedTodos} />
+
+
+            </div>
+            <div className="col-3">
+                <ListHeader title={"Later"} />
+
+            </div>
+            <div className="col-3">
+                <ListHeader title={"My Intention"} />
+
+            </div>
         </div >
 
     )
 }
 
 
-const ListHeader = () => {
-    return <h5>Today</h5>
+const ListHeader = (props) => {
+    return <h5>{props.title}</h5>
 }
 
 
