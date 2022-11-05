@@ -26,7 +26,7 @@ const DoneToggle = (props) => {
     return (
         <button id={props.id} type="button" className="btn btn-success btn-sm" onClick={(e) => {
             completeTodo(e)
-        }}>Done</button>
+        }} todos={todos}>Done</button>
 
     )
 }
@@ -39,9 +39,8 @@ const DeleteToggle = () => {
 
 const ShowTodos = (props) => {
     const todos = props.todos
+
     return (
-
-
         todos.map((todo, index) => {
             return <li className="list-group-item d-flex justify-content-between align-items-center" key={index} id={index}>
                 {todo}

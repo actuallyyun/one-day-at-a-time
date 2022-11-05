@@ -12,14 +12,17 @@ const TodoList = () => {
         //When user presses "Enter" key, a new todo is created 
         if (e.key === "Enter") {
             const newTodo = e.target.value
-            if (newTodo.length !== 0) {
+            //User cannot create todo with empty string nor dulipcated todo
+            if (newTodo.length !== 0 && !isDuplicatedTodo(newTodo)) {
                 setTodos(todos.concat(newTodo))
-                console.log(todos)
+
                 //empty input area
                 e.target.value = ""
-
             }
         }
+    }
+    const isDuplicatedTodo = (todo) => {
+        return todos.includes(todo)
     }
 
     return (
@@ -42,6 +45,7 @@ const TodoList = () => {
 
 const ListContent = (props) => {
     const todos = props.todos
+
     if (todos.length > 0) {
         return (<TodoItems todos={todos} />)
     } else {
